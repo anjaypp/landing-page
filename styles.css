@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
 
 * {
@@ -48,6 +49,20 @@ header {
     text-align: center;
     padding: 50px;
 }
+.text-content {
+    flex: 1;
+}
+
+.image-content {
+    flex: 0 0 150px; /* Set a fixed width for the image container */
+    margin-left: 20px;
+}
+
+.profile-image {
+    max-width: 100%;
+    border-radius: 50%;
+}
+
 
 .maintext {
     font-size: 48px;
@@ -116,7 +131,7 @@ main h2 {
     width: 160px;
     height: 160px;
 }
-
+/*
 .quote {
     background-color: #e5e7eb;
     padding: 70px;
@@ -135,6 +150,64 @@ main h2 {
     font-size: 20px;
     font-weight: bold;
     color: #1F2937;
+}
+*/
+#profile-section {
+    background-color: #e5e7eb;
+    padding: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 2em;
+}
+
+#profile-details,  #edu-details, #social-links {
+    background-color: #f9faf8;
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 500px;
+}
+
+#profile-details h2, #edu-details h2, #social-links h3 {
+    font-size: 24px;
+    color: #1F2937;
+    margin-bottom: 10px;
+}
+
+#profile-details p , #edu-details p #social-links a {
+    font-size: 18px;
+    color: #1F2937;
+    margin: 10px 0;
+}
+
+#profile-details p strong, #edu-details p strong{
+    color: #3882F6;
+}
+
+#social-links a {
+    display: block;
+    margin: 10px 0;
+    text-decoration: none;
+    color: #3882F6;
+    transition: color 0.3s ease;
+}
+
+#social-links a:hover {
+    color: #2768c6;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    #profile-section {
+        padding: 50px 20px;
+    }
+
+    #profile-details, #edu-details, #social-links {
+        width: 100%;
+        max-width: 100%;
+    }
 }
 
 .signup {
@@ -188,10 +261,22 @@ button:hover {
     border: 2px solid #f9faf8;
 }
 
-/* Media Queries */
-
 /* Small devices (landscape phones, less than 768px) */
 @media (max-width: 768px) {
+    .introduction {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .image-content {
+        margin-left: 0;
+        margin-top: 20px;
+    }
+
+    .profile-image {
+        width: 150px;
+        height: 150px;
+    }
     .navbar {
         flex-direction: column;
         align-items: flex-start;
